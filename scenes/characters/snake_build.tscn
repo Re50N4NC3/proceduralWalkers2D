@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bysx0y00gft42"]
+
+[ext_resource type="PackedScene" uid="uid://c7ykv0eqg5043" path="res://scenes/characters/snake_head.tscn" id="1_vga1b"]
+
+[node name="SnakeBuild" type="Node2D"]
+
+[node name="SnakeHead" parent="." instance=ExtResource("1_vga1b")]
+position = Vector2(233, 213)

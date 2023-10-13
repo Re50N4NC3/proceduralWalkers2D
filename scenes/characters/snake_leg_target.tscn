@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctbs6mubjln3e"]
+
+[ext_resource type="Texture2D" uid="uid://np55jj0g1k1y" path="res://assets/sprites/body.png" id="1_0fnwq"]
+
+[node name="snake_leg_target" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("1_0fnwq")
