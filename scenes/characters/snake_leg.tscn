@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf1x47wx7y7d"]
+
+[ext_resource type="Script" path="res://scenes/characters/snake_leg.gd" id="1_bbdup"]
+[ext_resource type="Texture2D" uid="uid://np55jj0g1k1y" path="res://assets/sprites/body.png" id="1_j46eq"]
+
+[node name="SnakeLeg" type="Node2D"]
+script = ExtResource("1_bbdup")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_j46eq")

@@ -10,6 +10,8 @@ var num_body_parts: int = 15  # Number of body parts to spawn
 var snake_leg_target_scene: PackedScene = preload("res://scenes/characters/snake_leg_target.tscn")
 var leg_body_parts: Array[int] = [3, 6]
 
+var snake_leg_scene: PackedScene = preload("res://scenes/characters/snake_leg.tscn")
+
 func _ready():
 	spawn_body_parts()
 	
@@ -32,6 +34,11 @@ func spawn_legs(parent_body_part):
 		var legs_target_instance = snake_leg_target_scene.instantiate()
 		parent_body_part.add_child.call_deferred(legs_target_instance)
 		legs_target_instance.position += Vector2(40, -30 * dir)
+		
+		var legs_instance = snake_leg_scene.instantiate()
+		get_tree().get_root().call_deferred("add_child", legs_instance)
+		legs_instance.position = legs_target_instance.position
+		legs_instance.target = legs_target_instance
 	
 
 func _physics_process(delta):
